@@ -624,3 +624,37 @@ ll
 history-a
 history -a
 ll
+cp .bash_history backup/
+cd backup/
+ll
+git config --global user.name axvillalba
+git config --global user.email axvillalba20@gmail.com
+cd ..
+git clone https://github.com/axvillalba/UTNFRA_SO_Recu_Integral_Villalba.git
+cd UTNFRA_SO_Recu_Integral_Villalba/
+ll
+cp -r ../backup/ .
+ll
+cd ..
+ll
+cd backup/
+ll
+cd ..
+cd UTNFRA_SO_Recu_Integral_Villalba/
+cp -r ../backup/* .
+ll
+cd .git/
+ll
+d ..
+cd ..
+git add .
+git status
+git commit -m "Finalizacion del RecuGlobal"
+git push origin main
+ll
+sudo rm backup/
+sudo rm backup
+sudo rm -r backup
+ll
+cd ..
+ll
