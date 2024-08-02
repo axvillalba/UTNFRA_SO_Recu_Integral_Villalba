@@ -1,0 +1,27 @@
+---
+- hosts: all
+  become: yes
+
+  roles:
+    - name: 2PRecuperatorio
+    - name: Alta_Usuario_Villalba
+    - name: Sudoers_Villalba
+    - name: Instala-tools_VIllalba
+
+  tasks:
+    - name: "Después de ejecutar el rol 2PRecuperatorio"
+      debug:
+        msg: "Archivo de datos del alumno creado."
+
+    - name: "Después de ejecutar el rol Alta_Usuario_Villalba"
+      debug:
+        msg: "Usuarios y grupos configurados."
+
+    - name: "Después de ejecutar el rol Sudoers_Villalba"
+      debug:
+        msg: "Configuración de sudoers actualizada."
+
+    - name: "Después de ejecutar el rol Instala-tools_Villalba"
+      debug:
+        msg: "Herramientas instaladas."
+

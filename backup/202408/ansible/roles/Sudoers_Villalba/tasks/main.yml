@@ -1,0 +1,10 @@
+---
+
+- name: "Configurar sudoers para GProfesores"
+  become: yes
+  lineinfile:
+    path: /etc/sudoers
+    state: present
+    line: '%GProfesores ALL=(ALL) NOPASSWD: ALL'
+    validate: 'visudo -cf %s'
+
